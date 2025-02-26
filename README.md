@@ -73,6 +73,7 @@ This software is the property of **Mime Connect**. Unauthorized distribution is 
 3. Create and manage purchase orders through the **Procurement Dashboard**.
 4. Approve purchase orders based on defined rules.
 5. Generate PDF reports for records.
+6. Stup SMTP email for automatic email sending.
 
-For further inquiries, contact **support@mimeconnect.com**.
+For further inquiries, contact **sabikunnaharbristy16@gmail.com**.
 
