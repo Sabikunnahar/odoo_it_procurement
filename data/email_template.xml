@@ -1,0 +1,15 @@
+<odoo>
+    <record id="email_template_po_vendor" model="mail.template">
+        <field name="name">Purchase Order Notification</field>
+        <field name="model_id" ref="purchase.model_purchase_order"/>
+        <field name="email_from">${object.user_id.email}</field>
+        <field name="email_to">${object.partner_id.email}</field>
+        <field name="subject">New Purchase Order Created</field>
+        <field name="body_html">
+            <![CDATA[
+            <p>Dear ${object.partner_id.name},</p>
+            <p>A new purchase order has been created. Please check your vendor portal.</p>
+            ]]>
+        </field>
+    </record>
+</odoo>

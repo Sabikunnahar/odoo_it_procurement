@@ -1,0 +1,26 @@
+<odoo>
+    <template id="report_purchase_order">
+        <t t-call="web.external_layout">
+            <main>
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <h2>Purchase Order: <t t-esc="doc.name"/></h2>
+                        <p>Vendor: <t t-esc="doc.partner_id.name"/></p>
+                        <p>Total Amount: <t t-esc="doc.amount_total"/> Taka</p>
+
+                        <!-- Digital Signature Section -->
+                        <div class="signature">
+                            <p>Approved by:</p>
+                            <t t-if="doc.md_id and doc.md_id.signature">
+                                <img t-att-src="'data:image/png;base64,%s' % doc.md_id.signature" width="150px"/>
+                            </t>
+                            <t t-if="doc.md_id">
+                                <p><t t-esc="doc.md_id.name"/></p>
+                            </t>
+                        </div>
+                    </div>
+                </t>
+            </main>
+        </t>
+    </template>
+</odoo>

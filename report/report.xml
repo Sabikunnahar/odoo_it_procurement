@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+
+        <!-- Action to Generate Report -->
+        <record id="action_purchase_order_report" model="ir.actions.report">
+            <field name="name">Procurement Report</field>
+            <field name="model">purchase.order</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">odoo_it_procurement.report_purchase_order</field>
+            <field name="report_file">odoo_it_procurement.report_purchase_order</field>
+            <field name="binding_model_id" ref="purchase.model_purchase_order"/>
+            <field name="print_report_name">'Purchase Order - %s' % (object.name)</field>
+        </record>
+
+        <!-- Menuitem-->
+        <menuitem id="menu_action_purchase_order_report"
+                  name="Procurement Report"
+                  parent="menu_procurement_root"
+                  action="action_purchase_order_report"/>
+    </data>
+</odoo>

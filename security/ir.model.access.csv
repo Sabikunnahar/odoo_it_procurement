@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_procurement_team,purchase.order,model_purchase_order,odoo_it_procurement.group_procurement_team,1,1,1,1
+access_coo,purchase.order,model_purchase_order,odoo_it_procurement.group_coo,1,1,0,0
+access_md,purchase.order,model_purchase_order,odoo_it_procurement.group_md,1,1,0,0
+access_vendor,purchase.order,model_purchase_order,odoo_it_procurement.group_vendor,1,0,0,0
